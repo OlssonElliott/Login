@@ -1,5 +1,6 @@
 package com.login.login.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,15 +15,19 @@ public class User {
     private String firstName;
     private String lastName;
     private String email;
-    private String userName;
+    private String username;
     private String password;
 
     public User(String firstName, String lastName, String email, String userName, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.userName = userName;
+        this.username = userName;
         this.password = password;
+    }
+
+    public User() {
+
     }
 
     public int getId() {
@@ -58,11 +63,11 @@ public class User {
     }
 
     public String getUserName() {
-        return userName;
+        return username;
     }
 
     public void setUserName(String userName) {
-        this.userName = userName;
+        this.username = userName;
     }
 
     public String getPassword() {
