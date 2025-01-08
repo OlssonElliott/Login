@@ -24,5 +24,10 @@
         <button>Mina Ordrar</button>
     </a>
 
+    <ul>
+        <li th:each="product : ${products}">
+            <a th:href="@{/product/{id}(id=${product.id})}" th:text="${product.name}"></a>
+        </li>
+    </ul>
 </body>
 </html>

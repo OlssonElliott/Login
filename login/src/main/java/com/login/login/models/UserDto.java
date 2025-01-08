@@ -23,13 +23,12 @@ public class UserDto implements UserDetails {
 
     @Override
     public String getPassword() {
-        // TODO Auto-generated method stub
         return user.getPassword();
     }
 
     @Override
     public String getUsername() {
-        return user.getUserName();
+        return user.getUsername();
     }
 
 }
