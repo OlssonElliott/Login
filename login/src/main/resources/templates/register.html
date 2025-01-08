@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <script src="/js/register.js" defer></script>
 </head>
 <body>
     <h1>Registrera</h1>
+    <a href="/">
+        <button>Tillbaka</button>
+    </a>
     <p>Skapa ny användare:</p>
     <form th:action="@{/register-new}" method="post">
-        <input type="text" name="username" placeholder="Användarnamn">
+        <input class="regInput" type="text" name="username" placeholder="Användarnamn">
         <br>
-        <input type="text" name="password" placeholder="Lösenord">
+        <input class="regInput" type="text" name="password" placeholder="Lösenord">
         <br>
-        <input type="text" name="firstName" placeholder="Förnamn">
+        <input class="regInput" type="text" name="firstName" placeholder="Förnamn">
         <br>
-        <input type="text" name="lastName" placeholder="Efternamn">
+        <input class="regInput" type="text" name="lastName" placeholder="Efternamn">
         <br>
-        <input type="text" name="email" placeholder="Email">
+        <input class="regInput" type="text" name="email" placeholder="Email">
         <br>
-        <button type="submit">Skapa användare</button>
+        <button id="regBtn" type="submit">Skapa användare</button>
     </form>
 </body>
 </html>
