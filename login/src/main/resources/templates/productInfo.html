@@ -17,5 +17,8 @@
         <p th:text="${product.description}"></p>
         <p th:text="${product.price}"></p>
     </div>
+    
+    <button sec:authorize="isAuthenticated()">Lägg till bland ordrar</button>
+
 </body>
 </html>
