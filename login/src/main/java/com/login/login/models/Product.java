@@ -14,9 +14,9 @@ public class Product {
     private String name;
     private String pictureLink;
     private String description;
-    private String price;
+    private int price;
 
-    public Product(String name, String pictureLink, String description, String price) {
+    public Product(String name, String pictureLink, String description, int price) {
         this.name = name;
         this.pictureLink = pictureLink;
         this.description = description;
@@ -55,11 +55,11 @@ public class Product {
         this.description = description;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 }
