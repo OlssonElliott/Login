@@ -22,10 +22,10 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable()).authorizeHttpRequests(authrorize -> authrorize
                         // .anyRequest().permitAll())
-                .anyRequest().authenticated())
+                        .requestMatchers("/").permitAll()
+                        .anyRequest().authenticated())
                 .userDetailsService(userDetailsService)
                 .formLogin(Customizer.withDefaults());
-
         return http.build();
     }
 
