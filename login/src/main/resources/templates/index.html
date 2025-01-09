@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <h1>Webbapp - Login </h1>
     
 <!--Visar beroende på inloggad eller ej: https://stackoverflow.com/questions/65516111/springboot-show-logout-button-for-only-users-that-are-logged-in-without-thymelea -->
     
-<div>
+<div id="indexDiv">
     <a href="/login" sec:authorize="!isAuthenticated()">
          <button>Login</button>
     </a>
@@ -18,19 +19,15 @@
     <a href="/logout" sec:authorize="isAuthenticated()">
         <button>Logout</button>
     </a>
-</div>
-
-    <br>
 
     <a href="/register">
         <button>Registrera ny användare</button>
     </a>
 
-    <br>
-
     <a href="/orders" sec:authorize="isAuthenticated()">
         <button>Mina Ordrar</button>
     </a>
+</div>
 
     <ul>
         <li th:each="product : ${products}">

@@ -22,7 +22,8 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable()).authorizeHttpRequests(authrorize -> authrorize
                         // .anyRequest().permitAll())
-                        .requestMatchers("/", "/register", "/product/**", "/register-new", "/js/**").permitAll()
+                        .requestMatchers("/", "/register", "/product/**", "/register-new", "/js/**", "/css/**")
+                        .permitAll()
                         .anyRequest().authenticated())
                 .userDetailsService(userDetailsService)
                 .formLogin(Customizer.withDefaults());
