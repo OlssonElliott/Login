@@ -8,13 +8,17 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+
     <h1>Registrera ny användare</h1>
     
     <div id="registerDiv">
+        
         <a href="/">
             <button>Tillbaka</button>
         </a>
+
         <p>Skapa ny användare:</p>
+
         <form th:action="@{/register-new}" method="post">
             <input class="regInput" type="text" name="username" placeholder="Användarnamn">
             <br>
@@ -28,6 +32,8 @@
             <br>
             <button id="regBtn" type="submit">Skapa användare</button>
         </form>
+
     </div>
+
 </body>
 </html>
