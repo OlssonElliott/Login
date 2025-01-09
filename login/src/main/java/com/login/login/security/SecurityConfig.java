@@ -11,6 +11,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 import com.login.login.services.UserDetailsService;
 
+//Security config, gör undantag för vissa sidor och lägger till kryptering, hanterar inloggning. 
 @Configuration
 public class SecurityConfig {
 

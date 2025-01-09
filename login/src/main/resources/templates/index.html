@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    
     <h1>Webbapp - Login </h1>
     
 <!--Visar beroende på inloggad eller ej: https://stackoverflow.com/questions/65516111/springboot-show-logout-button-for-only-users-that-are-logged-in-without-thymelea -->
@@ -27,6 +28,7 @@
     <a href="/orders" sec:authorize="isAuthenticated()">
         <button>Mina Ordrar</button>
     </a>
+
 </div>
 
     <ul>
@@ -34,5 +36,6 @@
             <a th:href="@{/product/{id}(id=${product.id})}" th:text="${product.name}"></a>
         </li>
     </ul>
+
 </body>
 </html>

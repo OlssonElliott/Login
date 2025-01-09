@@ -6,13 +6,14 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.login.login.models.UserDto;
-import com.login.login.repositories.LoginRepository;
+import com.login.login.repositories.UserRepository;
 
+//Service klass för user, metod för att hämta användare.
 @Service
 public class UserDetailsService implements org.springframework.security.core.userdetails.UserDetailsService {
 
     @Autowired
-    LoginRepository repository;
+    UserRepository repository;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
