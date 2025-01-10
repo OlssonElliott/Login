@@ -23,7 +23,7 @@ public class PageController {
     @Autowired
     ProductRepository productRepository;
     @Autowired
-    UserRepository loginRepository;
+    UserRepository userRepository;
     @Autowired
     private PasswordEncoder bcryptEncoder;
 
@@ -62,7 +62,7 @@ public class PageController {
     public String registerUser(@ModelAttribute User user) {
         String encryptedPassword = bcryptEncoder.encode(user.getPassword());
         user.setPassword(encryptedPassword);
-        loginRepository.save(user);
+        userRepository.save(user);
         return "redirect:/";
     }
 }
